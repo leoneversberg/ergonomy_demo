@@ -1,5 +1,7 @@
 # Ergonomy Demo Using a Webcam With MediaPipe Pose
 
+![demo](demo.gif)
+
 ## Setup
 with anaconda: 
 ```
