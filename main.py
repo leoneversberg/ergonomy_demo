@@ -22,9 +22,9 @@ class Ergonomy:
 			right_knee = np.array([landmarks_3d.landmark[26].x, landmarks_3d.landmark[26].y, landmarks_3d.landmark[26].z])
 			
 			# helper joints
-			mid_shoulder = (self.left_shoulder + self.right_shoulder) / 2
-			mid_hip = (self.left_hip + self.right_hip) / 2
-			mid_knee = (self.left_knee + self.right_knee) / 2
+			mid_shoulder = (left_shoulder + right_shoulder) / 2
+			mid_hip = (left_hip + right_hip) / 2
+			mid_knee = (left_knee + right_knee) / 2
 
 			# angles
 			self.trunk_angle = self.get_angle(mid_knee, mid_hip, mid_shoulder, mid_hip, adjust=True)
