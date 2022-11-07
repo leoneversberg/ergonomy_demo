@@ -25,9 +25,8 @@ opencv-contrib-python=4.6.0.66=pypi_0
 openssl=3.0.7=h166bdaf_0
 packaging=21.3=pypi_0
 pillow=9.3.0=pypi_0
-pip=22.3=pyhd8ed1ab_0
+pip=22.3.1=pyhd8ed1ab_0
 protobuf=3.20.3=pypi_0
-pycodestyle=2.9.1=pypi_0
 pyparsing=3.0.9=pypi_0
 python=3.7.12=hf930737_100_cpython
 python-dateutil=2.8.2=pypi_0
@@ -36,7 +35,6 @@ setuptools=65.5.1=pyhd8ed1ab_0
 six=1.16.0=pypi_0
 sqlite=3.39.4=h4ff8645_0
 tk=8.6.12=h27826a3_0
-tomli=2.0.1=pypi_0
 typing-extensions=4.4.0=pypi_0
-wheel=0.38.1=pyhd8ed1ab_0
+wheel=0.38.2=pyhd8ed1ab_0
 xz=5.2.6=h166bdaf_0

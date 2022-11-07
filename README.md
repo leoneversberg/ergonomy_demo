@@ -5,8 +5,14 @@
 ## Setup
 with anaconda: 
 ```
-conda create --name ergonomy_demo --file requirements.txt
-conda activate ergonomy_demo
+conda create -n ergonomy python=3.7
+conda activate ergonomy
+python -m pip install mediapipe
+
 ```
 
+## Run 
+```
+python main.py
 
+```

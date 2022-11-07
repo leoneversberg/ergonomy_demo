@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -12,6 +13,7 @@ class Ergonomy:
 		self.trunk_angle=0
 
 	def update_joints(self, landmarks_3d):
+		"""update all needed joints based on landmarks_3d.landmark from mp"""
 		try:
 			# media pipe joints (BlazePose GHUM 3D)
 			left_shoulder = np.array([landmarks_3d.landmark[11].x, landmarks_3d.landmark[11].y, landmarks_3d.landmark[11].z])
@@ -41,6 +43,8 @@ class Ergonomy:
 		cosine_angle = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 		angle = np.arccos(cosine_angle)
 
+		# adjust by substracting 180 deg if needed 
+		# this lets the angle start at 0 instead of 180
 		if (adjust):
 			angle_adjusted = abs(np.degrees(angle) - 180)
 			return int(angle_adjusted)
@@ -48,6 +52,7 @@ class Ergonomy:
 			return int(abs(np.degrees(angle)))
 
 	def get_trunk_color(self):
+		"""returns (B,G,R) colors for visualization"""
 		if self.trunk_angle < 20:
 			return (0,255,0)
 		elif self.trunk_angle <= 60:
